@@ -1,8 +1,8 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext, useState } from 'react';
 
 //INTERNAL IMPORT
-import { CrowdFundingContext } from "../Context/CroudFunding";
-import { Hero, Card, PupUp } from "../Components";
+import { CrowdFundingContext } from '../Context/CroudFunding';
+import { Hero, Card, PupUp } from '../Components';
 const index = () => {
   const {
     titleData,
@@ -11,6 +11,7 @@ const index = () => {
     donate,
     getUserCampaigns,
     getDonations,
+    gasLimit,
   } = useContext(CrowdFundingContext);
 
   const [allcampaign, setAllcampaign] = useState();
@@ -37,13 +38,13 @@ const index = () => {
       <Hero titleData={titleData} createCampaign={createCampaign} />
 
       <Card
-        title="All Listed Campaign"
+        title='All Listed Campaign'
         allcampaign={allcampaign}
         setOpenModel={setOpenModel}
         setDonate={setDonateCampaign}
       />
       <Card
-        title="Your Created Compaign"
+        title='Your Created Compaign'
         allcampaign={usercampaign}
         setOpenModel={setOpenModel}
         setDonate={setDonateCampaign}

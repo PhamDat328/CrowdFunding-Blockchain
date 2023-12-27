@@ -1,7 +1,7 @@
-const hre = require("hardhat");
+const hre = require('hardhat');
 
 async function main() {
-  const CrowdFunding = await hre.ethers.getContractFactory("CrowdFunding");
+  const CrowdFunding = await hre.ethers.getContractFactory('CrowdFunding');
   const crowdFunding = await CrowdFunding.deploy();
 
   await crowdFunding.deployed();
